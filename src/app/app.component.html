@@ -6,51 +6,251 @@
   </button>
 </mat-toolbar>
 <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
-  <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
-    <mat-card class="mat-elevation-z4">
-      <!-- <mat-card-header>
-        <mat-card-title>Mountains {{num}}</mat-card-title>
+  <!-- diap 14 -->
+  <!-- <div *ngIf="false"> -->
+    <div
+      class="border border-dark"
+      style="margin: 1%"
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let num of [1, 2]"
+    >
+      <mat-card-header>
+        <div class="d-flex justify-content-center">
+          <mat-card-title>
+            <h3>Candidato {{ num }}</h3>
+          </mat-card-title>
+        </div>
       </mat-card-header>
-       <img mat-card-image src="./../assets/images/mountains.jpg">
-      <mat-card-content>
-        <p>
-          The Himalayas is a mountain range in Asia.
-        </p>
-      </mat-card-content>
+
+      <!-- imagen -->
+      <div class="d-flex justify-content-center">
+        <img mat-card-image src="./../assets/images/{{ num }}.jpg" />
+      </div>
+      <br />
+
+      <!-- datos -->
+      <div class="d-flex justify-content-center">
+        <mat-card-content>
+          <h5>Nombre Cantidato {{ num }}</h5>
+          <br /><br />
+          <h1 class="d-flex justify-content-center">Lista {{ num }}</h1>
+          <br />
+
+          <h2 class="d-flex justify-content-center">Partido {{ num }}</h2>
+        </mat-card-content>
+      </div>
+      <br />
+      <!-- boton modificar -->
       <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions> -->
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-lg btn-dark">MODIFICAR</button>
+        </div>
+      </mat-card-actions>
 
       <!-- desde aca -->
-      <div class="panel panel-primary" *ngFor="let employee of [0,1,2,3,4]">
-        <!-- <div class="panel-heading">
-          <h3 class="panel-title">{{employee}}</h3>
-        </div> -->
+      <!-- <div class="panel panel-primary" *ngFor="let item of [1, 2, 3, 4, 5, 6]">
         <div class="panel-body">
-          <div class="col-xl-12">
+          <div class="d-flex justify-content-center">Alianza Union Civica</div>         
+           <div class="col-xl-12">
             <div class="row">
-              <div class="col-xl-4 float-left">
-                <img mat-card-image src="./../assets/images/mountains.jpg">
-                <!-- <img [src]="../assets/images/face.png"></img> -->
+              <div class=".foto-principal">
+                <img mat-card-image [src]="./../assets/images/" + {{item}} + ".jpg">
               </div>
-              <div class="col-xl-8 float-right">
-                <div class="row float-right">
-                  <div class="col-xl-6">
+              <div class="col-xl-8 float-center">
+                <div class="row">
+                  <div class="d-flex justify-content-center">
                     Gender
                   </div>
-                  <div class="col-xl-6">
-                    : {{employee}}
-                  </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
+      </div>  -->
+
+      <!-- gdiaz -->
+      <!-- <div class="candidato candidato-persona " id="candidato_172" style="background-color: #FFFFFF; color: #000000; border-color: #808080;">
+        <div class="nombre-lista">Alianza Union Civica</div>
+        <div class="foto-candidato">
+            <img src="./assets/images/99560.1201.jpg">
+        </div>
+        <div class="lista-con-imagen">
+            <p class="palabra-lista">Lista</p>
+            <p class="numero-lista">560</p>
+            <div class="nombre-corto-lista">AUC</div>
+        </div>
+        <div class="candidato-principal">Silvestre Gomez</div> -->
+
+      <!-- fabi -->
+      <!-- <div style="display: flex; border: 1px solid #ccc; background-color: #fff; border-radius: 4px; padding: 10px; width: 350px;">
+          <div style="width: 20%;">
+              <img src="https://www.shareicon.net/data/512x512/2016/05/24/770117_people_512x512.png" alt="..." style="height: auto; width: 100%;">
+          </div>
+          <div style="width: 80%; display: flex; flex-direction: column; padding-left: 10px;">
+              <h4>Card title</h4>
+              <p>Card This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p><small>Additional Information</small></p>
+          </div>
+        </div> -->
+    </div>
+  <!-- </div> -->
+
+  <!-- diap 13 -->
+  <div *ngIf="false">
+    <div
+      class="border border-dark"
+      style="margin: 1%"
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+    >
+      <!-- imagen -->
+      <div class="d-flex justify-content-center">
+        <img
+          style="height: 30%; width: 30%"
+          mat-card-image
+          src="./../assets/images/{{ num }}.jpg"
+        />
       </div>
-      <!-- <a><strong>Angular generated Form Model:</strong>{{employeeForm.value | json}}</a> -->
-      <!-- </div> -->
-    </mat-card>
+      <!-- datos -->
+      <div class="d-flex justify-content-center">
+        <mat-card-content>
+          <h6 class="d-flex justify-content-center">
+            {{ num }}
+          </h6>
+          <h5 class="d-flex justify-content-center">
+            Nombre Cantidato {{ num }}
+          </h5>
+          <br />
+        </mat-card-content>
+      </div>
+    </div>
+  </div>
+
+  <!-- diap 12 -->
+  <div *ngIf="false">
+    <div
+      class="border border-dark"
+      style="margin: 1%"
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let num of [1, 2, 3, 4, 5, 6, 7]"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- imagen -->
+          <div class="col-sm">
+            <div class="d-flex justify-content-left">
+              <img
+                style="height: 100%; width: 100%"
+                mat-card-image
+                src="./../assets/images/{{ num }}.jpg"
+              />
+              <!-- <p>Nombre Cantidato {{ num }}</p> -->
+              <!-- <h5>Nombre Cantidato {{ num }}</h5> -->
+            </div>
+          </div>
+          <div class="col-sm">
+            <!-- datos -->
+            <div class="d-flex justify-content-center">
+              <mat-card-content>
+                <br /><br />
+                <h1 class="d-flex justify-content-left">{{ num }}</h1>
+              </mat-card-content>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h6>Nombre Cantidato {{ num }}</h6>
+        </div>
+      </div>
+      <div>
+        <br />
+        <h3 class="d-flex justify-content-center">Partido {{ num }}</h3>
+        <h6 class="d-flex justify-content-center">Siglas {{ num }}</h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- diap 11 -->
+  <div *ngIf="false">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <h4 class="d-flex justify-content-center">Lista 1</h4>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <h1 class="d-flex justify-content-center">Partido 1</h1>
+      </div>
+    </div>
+    <div
+      class="border border-dark"
+      style="margin: 1%"
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+    >
+      <!-- imagen -->
+      <div class="d-flex justify-content-center">
+        <img
+          style="height: 30%; width: 30%"
+          mat-card-image
+          src="./../assets/images/{{ num }}.jpg"
+        />
+      </div>
+      <!-- datos -->
+      <div class="d-flex justify-content-center">
+        <mat-card-content>
+          <h6 class="d-flex justify-content-center">
+            {{ num }}
+          </h6>
+          <h5 class="d-flex justify-content-center">
+            Nombre Cantidato {{ num }}
+          </h5>
+          <br />
+        </mat-card-content>
+      </div>
+    </div>
+  </div>
+
+  <!-- diap 7 -->
+  <div *ngIf="false">
+    <div
+      class="border border-dark"
+      style="margin: 10px"
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let num of [1, 2, 3, 4, 5, 6, 7]"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <!-- datos -->
+            <div class="d-flex justify-content-center">
+              <mat-card-content>
+                <br /><br />
+                <h1 class="d-flex justify-content-left">Lista {{ num }}</h1>
+              </mat-card-content>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="row d-flex justify-content-center">
+          <h2 class="d-flex justify-content-center">Partido {{ num }}</h2>
+        </div>
+        <br />
+        <br />
+        <div class="row d-flex justify-content-center">
+          <br />
+          <h6 class="d-flex justify-content-center">Siglas {{ num }}</h6>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
